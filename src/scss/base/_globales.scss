@@ -1,0 +1,24 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: $fuente_principal;
+    margin: 0;
+
+    background-color: $color5;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3 {
+    font-family: $fuente_principal;
+    text-align: center;
+}
+.contenedor {
+    margin: 1rem;
+    padding: 1rem;
+}

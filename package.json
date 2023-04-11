@@ -1,0 +1,21 @@
+{
+  "name": "starup_empresa",
+  "version": "1.0.0",
+  "description": "Pagina web de mi empresa de desarrollo web",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css",
+    "tarea": "gulp tarea"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp"
+  ],
+  "author": "Alejandro Estrada",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.61.0"
+  }
+}

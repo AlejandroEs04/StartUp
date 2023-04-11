@@ -1,0 +1,34 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: $color1;
+    color: $color5;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .navegacion {
+        visibility: visible;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        a {
+            color: $blanco;
+            margin-bottom: 1rem;
+        }
+    }
+}
+@media (min-width:$tablet) {
+    .footer {
+        .navegacion {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 2rem;
+        }
+    }
+}
