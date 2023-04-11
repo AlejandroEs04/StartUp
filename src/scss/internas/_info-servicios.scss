@@ -1,0 +1,39 @@
+.servicios-ofrecemos {
+    padding-top: 5rem;
+    margin: auto 3rem;
+}
+.servicios-info {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:$tablet) {
+    .servicios-info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.servicio-info {
+    background-color: $blanco;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    img {
+        width: 12%;
+    }
+    h2 {
+        font-weight: $bold;
+        font-size: 2.5rem;
+    }
+    p {
+        margin-top: 0;
+        font-weight: $regular;
+        font-size: 1.7rem;
+    }
+}
+.imagen-info {
+    background-image: url('../img/servicio.webp');
+    background-size: cover;
+}

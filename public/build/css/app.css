@@ -410,6 +410,49 @@ template {
 }
 
 /** Media Queries **/
+.servicios-ofrecemos {
+  padding-top: 5rem;
+  margin: auto 3rem;
+}
+
+.servicios-info {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .servicios-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.servicio-info {
+  background-color: #FFFFFF;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.servicio-info img {
+  width: 12%;
+}
+.servicio-info h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+.servicio-info p {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.imagen-info {
+  background-image: url("../img/servicio.webp");
+  background-size: cover;
+}
+
 header {
   background-image: url("/../build/img/fondoHeader.webp");
   background-position: center;
@@ -445,6 +488,7 @@ header {
   align-items: center;
   background-color: none;
   margin: 0;
+  padding: 2rem;
   transition: background-color ease-in-out 0.2s;
 }
 .contenedor-header img {
@@ -551,26 +595,38 @@ header {
   }
 }
 .contenedor-ofrecemos {
+  text-align: center;
   margin: 0;
+  padding-top: 12rem;
 }
 .contenedor-ofrecemos h1 {
-  padding: 10rem 30%;
   visibility: hidden;
   color: #c6d6d6;
   font-weight: 700;
 }
-.contenedor-ofrecemos h1 span {
-  font-weight: 400;
-  font-size: 3rem;
-  color: #a92727;
+.contenedor-ofrecemos p {
+  visibility: hidden;
+  color: #FFFFFF;
 }
 
 @media (min-width: 768px) {
+  .contenedor-ofrecemos p {
+    visibility: visible;
+    font-size: 2rem;
+  }
   .contenedor-ofrecemos h1 {
     visibility: visible;
     font-size: 5rem;
   }
 }
+.logo {
+  width: 50%;
+}
+.logo img {
+  filter: invert(100%);
+  width: 100%;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -581,6 +637,14 @@ header {
 }
 .footer h1 {
   font-size: 4rem;
+}
+.footer .logo {
+  width: 20%;
+  padding: 2rem 0;
+}
+.footer .logo img {
+  filter: invert(100%);
+  width: 100%;
 }
 .footer .navegacion {
   visibility: visible;

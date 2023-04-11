@@ -23,8 +23,11 @@
         <div class="fondo-header">
             <div class="contenedor contenedor-header" id="nav">
                 <div class="contenedor-logo">
-                    <h1>Logo</h1>
-                    <div class="imagen-nav"><img src="/../build/img/icono-hamburguesa.svg"></div>
+                    <a href="/" class="logo">
+                        <img src="/../build/img/logo.svg">
+                    </a>
+                    
+                    <div class="imagen-nav"><img src="/../build/img/icono-hamburguesa.svg" class="nav-boton"></div>
                 </div>
 
                 <nav class="navegacion">
@@ -48,14 +51,17 @@
             </div>
         </div>
         <div class="contenedor contenedor-ofrecemos">
-            <h1>Desarrollo web <span>Especializado</span></h1>
+            <p>Ofrecemos un servicio de:</p>
+            <h1>Desarrollo web</h1>
         </div>
     </header>
 
     <?php echo $contenido; ?>
 
     <footer class="footer">
-        <h1>Logo</h1>
+        <a href="/" class="logo">
+            <img src="/../build/img/logo.svg">
+        </a>
         <nav class="navegacion">
                 <a href="/">Inicio</a>
                 <a href="/nosotros">Nosotros</a>

@@ -21,6 +21,42 @@
     </div>
 
     <div class="informacion">
+        <div class="servicios-ofrecemos">
+            <h1>Que servicios ofrecemos?</h1>
+            <div class="servicios-info">
+                <div class="servicio-info">
+                    <img src="/../build/img/monitor.gif">
+                    <h2>Sitios Web Responsive</h2>
+                    <p>Sitios web que se adapten al tamano de todas las pantallas, para una mejor experiencia de usuario</p>
+                </div>
+
+                <div class="servicio-info">
+                    <img src="/../build/img/shop.gif">
+                    <h2>Tiendas Virtuales</h2>
+                    <p>Desarrollamos tiendas online para que pueda hacer crecer su negocio</p>
+                </div>
+
+                <div class="servicio-info">
+                    <img src="/../build/img/www.gif">
+                    <h2>Dominio gratis</h2>
+                    <p>Le otorgamos 1 año completo de dominio gratis para su sitio web</p>
+                </div>
+
+                <div class="servicio-info">
+                    <img src="/../build/img/config.gif">
+                    <h2>Administracion completa</h2>
+                    <p>Capacidad de poder administrar su pagina web de forma directa, sin necesidad de gastos de actualizacion</p>
+                </div>
+
+                <div class="servicio-info">
+                    <img src="/../build/img/tool.gif">
+                    <h2>Capacitacion</h2>
+                    <p>Se capacitara de forma gratuita para saber como se utilizan la pagina web</p>
+                </div>
+
+                <div class="servicio-info imagen-info"></div>
+            </div>
+        </div>
         <div class="division">
             <div class="contenedor-div">
                 <div class="informacion-contenedor tegnologias">

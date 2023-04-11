@@ -23,12 +23,14 @@ header {
     position: fixed;
     width: 100%;
 }
+
 .contenedor-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: none;
     margin: 0;
+    padding: 2rem;
     img {
         width: 3rem;
         margin-bottom: 1rem;
@@ -139,25 +141,35 @@ header {
     }
 }
 .contenedor-ofrecemos {
+    text-align: center;
     margin: 0;
+    padding-top: 12rem;
     h1 {
-        padding: 10rem 30%;
         visibility: hidden;
         color: $color4;
         font-weight: $bold;
-
-        span {
-            font-weight: $regular;
-            font-size: 3rem;
-            color: $color3;
-        }
+    }
+    p {
+        visibility: hidden;
+        color: $blanco;
     }
 }
 @media (min-width:$tablet) {
     .contenedor-ofrecemos {
+        p {
+            visibility: visible;
+            font-size: 2rem;
+        }
         h1 {
             visibility: visible;
             font-size: 5rem;
         }
+    }
+}
+.logo {
+    width: 50%;
+    img {
+        filter: invert(100%);
+        width: 100%;
     }
 }

@@ -4,6 +4,9 @@
 @import 'base/normalize';
 @import 'base/mixins';
 
+// Internas
+@import 'internas/info-servicios';
+
 // UI
 @import 'layout/header';
 @import 'layout/footer';
