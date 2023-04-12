@@ -1,0 +1,25 @@
+.dark-mode {
+    background-color: $dark1;
+
+    .servicio-info {
+        background-color: $negro;
+    }
+
+    h1, p, h2 {
+        color: $dark3;
+    }
+
+    .servicio-info {
+        img {
+            filter: invert(100%);
+        }
+    }
+
+    .servicio {
+        .inverter {
+            position: relative;
+            z-index: -1;
+            filter: invert(100%);
+        }
+    }
+}

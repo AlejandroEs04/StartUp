@@ -1,14 +1,3 @@
-<?php
-    if(!isset($_SESSION)) {
-        session_start();
-    }
-    $auth = $_SESSION['login'] ?? false;
-
-    if(!isset($inicio)) {
-        $inicio = false;
-    } 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
-    <title>Pagina Web</title>
+    <link rel="icon" href="../build/img/Logo-pes.ico">
+    <title>WebNano</title>
 </head>
 <body>
     <header class="header" id="fondo">
@@ -26,8 +16,10 @@
                     <a href="/" class="logo">
                         <img src="/../build/img/logo.svg">
                     </a>
-                    
-                    <div class="imagen-nav"><img src="/../build/img/icono-hamburguesa.svg" class="nav-boton"></div>
+                    <div class="modos">
+                        <div class="imagen-nav"><img src="/../build/img/icono-hamburguesa.svg" class="nav-boton"></div>
+                        <div class="lighMode"></div>
+                    </div>
                 </div>
 
                 <nav class="navegacion">
@@ -35,24 +27,19 @@
                     <a href="/nosotros">Nosotros</a>
                     <div class="nav-servicio">
                         <div class="a-servicio">
-                            <a href="/servicios">Servicios</a>
+                            <a href="#servicios">Servicios</a>
                             <img src="/../build/img/flecha.svg">
                         </div>
                         <div class="a-servicios">
-                            <a href="#">Servicio 1</a>
-                            <a href="#">Servicio 2</a>
-                            <a href="#">Servicio 3</a>
-                            <a href="#">Servicio 4</a>
+                            <a href="#">Sitios Web</a>
+                            <a href="#">Tiendas Virtuales</a>
                         </div>
                     </div>
                     <a href="/contacto">Contactanos</a>
                     <a href="/portafolio">Portafolio</a>
                 </nav>
             </div>
-        </div>
-        <div class="contenedor contenedor-ofrecemos">
-            <p>Ofrecemos un servicio de:</p>
-            <h1>Desarrollo web</h1>
+            <?php if($other) { echo "<h1 class='tipo'>${tipo}</h1>"; } ?>
         </div>
     </header>
 

@@ -1,9 +1,9 @@
 header {
-    background-image: url("/../build/img/fondoHeader.webp");
+    background-image: url("/../build/img/fondoHeader1.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 25rem;
+    height: 30rem;
 }
 @media (min-width:$tablet) {
     .header {
@@ -16,8 +16,28 @@ header {
 }
 .contenedor-logo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+
+    .logo {
+        width: 70%;
+
+        img {
+            margin-bottom: 0;
+        }
+    }
+}
+@media (min-width: $tablet) {
+    .contenedor-logo {
+        flex-direction: row;
+        justify-content: center;
+        justify-content: start;
+
+        .logo {
+            width: 60%;
+        }
+    }
 }
 .fondo-header {
     position: fixed;
@@ -28,9 +48,10 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: none;
     margin: 0;
-    padding: 2rem;
+    padding: 2rem 5rem;
     img {
         width: 3rem;
         margin-bottom: 1rem;
@@ -47,6 +68,13 @@ header {
     }
     transition: background-color ease-in-out 0.2s;
 }
+@media (min-width: $tablet) {
+    .contenedor-header {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+    }
+}
 .nav {
     background-color: $color1;
 }
@@ -56,7 +84,7 @@ header {
     height: 0;
     a {
         margin-bottom: 0.6rem;
-        font-size: 1.8rem;
+        font-size: 1.65rem;
     }
     a:hover {
         color: darken($color: $blanco, $amount: 20);
@@ -75,7 +103,7 @@ header {
         align-items: center;
 
         img {
-            width: 1.4rem;
+            width: 1.2rem;
             margin-left: 0.6rem;
         }
     }
@@ -132,12 +160,16 @@ header {
     .navegacion {
         visibility: visible;
         opacity: 1;
-        width: 40%;
+        width: 70%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        width: 40%;
+    }
+}
+@media (min-width: $desktop) {
+    .navegacion {
+        width: 50%;
     }
 }
 .contenedor-ofrecemos {
@@ -151,7 +183,7 @@ header {
     }
     p {
         visibility: hidden;
-        color: $blanco;
+        color: $negro;
     }
 }
 @media (min-width:$tablet) {
@@ -159,6 +191,7 @@ header {
         p {
             visibility: visible;
             font-size: 2rem;
+            font-weight: $bold;
         }
         h1 {
             visibility: visible;
@@ -172,4 +205,37 @@ header {
         filter: invert(100%);
         width: 100%;
     }
+}
+.tipo {
+    color: $blanco;
+    padding-top: 5%;
+    font-size: 5rem;
+    font-weight: $regular;
+}
+.hide-tipo {
+    visibility: hidden;
+    opacity: 0;
+    display: block;
+}
+.modos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.imagen-nav {
+    img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+}
+.lighMode {
+    background-image: url("/../build/img/sun.svg");
+    filter: invert(100%);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.dark {
+    background-image: url("/../build/img/moon.svg");
 }
