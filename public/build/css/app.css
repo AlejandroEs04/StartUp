@@ -413,6 +413,9 @@ template {
 .dark-mode {
   background-color: #424242;
 }
+.dark-mode .fondo-header {
+  z-index: 2;
+}
 .dark-mode .servicio-info {
   background-color: #000000;
 }
@@ -420,6 +423,8 @@ template {
   color: #E6E6E6;
 }
 .dark-mode .servicio-info img {
+  position: relative;
+  z-index: 0;
   filter: invert(100%);
 }
 .dark-mode .servicio .inverter {
@@ -751,7 +756,6 @@ header {
   }
 }
 .informacion {
-  border-top: 4px solid #1C15F1;
   margin-bottom: 2rem;
 }
 .informacion h1 {
