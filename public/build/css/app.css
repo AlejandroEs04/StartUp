@@ -432,6 +432,12 @@ template {
   z-index: -1;
   filter: invert(100%);
 }
+.dark-mode .contenedor-forma label, .dark-mode .contenedor-forma legend {
+  color: #FFFFFF;
+}
+.dark-mode .contenedor-texto img {
+  filter: invert(100%);
+}
 
 .servicios-ofrecemos {
   padding-top: 5rem;
@@ -474,6 +480,107 @@ template {
 .imagen-info {
   background-image: url("../img/servicio.webp");
   background-size: cover;
+}
+
+.contenedor-contactanos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenedor-contactanos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 3rem 10%;
+    padding: 1rem 7rem;
+    justify-content: center;
+    align-content: center;
+  }
+}
+.contenedor-contacto {
+  width: 100%;
+}
+
+.contenedor-forma {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+.contenedor-forma legend {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.contenedor-forma label {
+  margin: 0 1rem 0 1rem;
+  font-size: 1.5rem;
+}
+.contenedor-forma input, .contenedor-forma textarea {
+  margin: 0.5rem 1rem 1rem 1rem;
+  padding: 0 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+}
+.contenedor-forma input {
+  height: 3rem;
+}
+.contenedor-forma textarea {
+  height: 15rem;
+}
+
+.contenedor-texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  padding: 1rem 0;
+}
+.contenedor-texto img {
+  width: 70%;
+  padding-bottom: 1rem;
+}
+.contenedor-texto p {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: 0.2rem 0;
+}
+.contenedor-texto .color {
+  color: #15A4F1;
+}
+
+.contenedor-boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-boton {
+    justify-content: start;
+    margin-top: 3rem;
+  }
+}
+.boton-enviar {
+  background-color: #15A4F1;
+  width: 90%;
+  font-size: 1.9rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color ease-in-out 0.3s;
+}
+
+@media (min-width: 768px) {
+  .boton-enviar {
+    width: 20%;
+  }
+}
+.boton-enviar:hover {
+  background-color: #0c86c7;
 }
 
 header {
@@ -560,6 +667,7 @@ header {
 
 .navegacion {
   visibility: hidden;
+  margin-top: 1.5rem;
   opacity: 0;
   height: 0;
   transition: height linear 0.2s, visibility linear 0.2s, opacity linear 0.2s, display linear 0s;
@@ -634,6 +742,7 @@ header {
   .navegacion {
     visibility: visible;
     opacity: 1;
+    margin-top: 0;
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -687,6 +796,29 @@ header {
   font-weight: 400;
 }
 
+.contenedor-info-tipo {
+  padding-top: 12rem;
+  text-align: center;
+  position: relative;
+}
+.contenedor-info-tipo h1, .contenedor-info-tipo p {
+  margin: 0;
+  padding: 0;
+}
+.contenedor-info-tipo h1 {
+  font-size: 4rem;
+}
+.contenedor-info-tipo p {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #15A4F1;
+}
+
+@media (min-width: 768px) {
+  .contenedor-info-tipo {
+    padding-top: 17rem;
+  }
+}
 .hide-tipo {
   visibility: hidden;
   opacity: 0;

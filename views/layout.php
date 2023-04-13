@@ -39,8 +39,15 @@
                     <a href="/portafolio">Portafolio</a>
                 </nav>
             </div>
-            <?php if($other) { echo "<h1 class='tipo'>${tipo}</h1>"; } ?>
         </div>
+        <?php if($other) { ?>
+                <div class="contenedor-info-tipo">
+                    <?php
+                    echo "<h1 class='tipo'>${tipo}</h1>";
+                    echo "<p class='tipo'>${info}</p>";
+                    ?>
+                </div>
+            <?php } ?>
     </header>
 
     <?php echo $contenido; ?>

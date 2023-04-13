@@ -1,0 +1,105 @@
+.contenedor-contactanos {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (min-width: $tablet) {
+    .contenedor-contactanos {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 3rem 10%;
+        padding: 1rem 7rem;
+    
+        justify-content: center;
+        align-content: center;
+    }
+}
+.contenedor-contacto {
+    width: 100%;
+}
+.contenedor-forma {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    legend {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+    }
+
+    label {
+        margin: 0 1rem 0 1rem;
+        font-size: 1.5rem;
+    }
+
+    input, textarea {
+        margin: 0.5rem 1rem 1rem 1rem;
+        padding: 0 0.5rem;
+        border: none;
+        border-radius: 0.3rem;
+    }
+
+    input {
+        height: 3rem;
+    }
+    
+    textarea {
+        height: 15rem;
+    }
+}
+.contenedor-texto {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    margin-left: 2rem;
+    padding: 1rem 0;
+
+    img {
+        width: 70%;
+        padding-bottom: 1rem;
+    }
+
+    p {
+        font-weight: $bold;
+        font-size: 2.2rem;
+        margin: 0.2rem 0;
+    }
+    .color {
+        color: $color3;
+    }
+}
+.contenedor-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+@media (min-width: $tablet) {
+    .contenedor-boton {
+        justify-content: start;
+        margin-top: 3rem;
+    }
+}
+.boton-enviar {
+    background-color: $color3;
+    width: 90%;
+    font-size: 1.9rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+
+    transition: background-color ease-in-out 0.3s;
+}
+@media (min-width: $tablet) {
+    .boton-enviar {
+        width: 20%;
+    }
+}
+.boton-enviar:hover {
+    background-color: darken($color: $color3, $amount: 10);
+}

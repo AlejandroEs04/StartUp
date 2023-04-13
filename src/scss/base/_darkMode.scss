@@ -28,4 +28,16 @@
             filter: invert(100%);
         }
     }
+
+    .contenedor-forma {
+        label, legend {
+            color: $blanco;
+        }
+    }
+
+    .contenedor-texto {
+        img {
+            filter: invert(100%);
+        }
+    }
 }

@@ -56,6 +56,6 @@ function mostrarNavegacion() {
     const navegacion = document.querySelector('.navegacion');
     navegacion.classList.toggle('show');
 
-    const tipo = document.querySelector('.tipo');
+    const tipo = document.querySelector('.contenedor-info-tipo');
     tipo.classList.toggle('hide-tipo');
 }

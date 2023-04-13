@@ -80,6 +80,7 @@ header {
 }
 .navegacion {
     visibility: hidden;
+    margin-top: 1.5rem;
     opacity: 0;
     height: 0;
     a {
@@ -160,6 +161,7 @@ header {
     .navegacion {
         visibility: visible;
         opacity: 1;
+        margin-top: 0;
         width: 70%;
         display: flex;
         flex-direction: row;
@@ -211,6 +213,29 @@ header {
     padding-top: 5%;
     font-size: 5rem;
     font-weight: $regular;
+}
+.contenedor-info-tipo {
+    padding-top: 12rem;
+    text-align: center;
+    position: relative;
+
+    h1, p {
+        margin: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    p {
+        margin-top: 0.5rem;
+        font-size: 2rem;
+        color: $color3;
+    }
+}
+@media (min-width: $tablet) {
+    .contenedor-info-tipo {
+        padding-top: 17rem;
+    }
 }
 .hide-tipo {
     visibility: hidden;

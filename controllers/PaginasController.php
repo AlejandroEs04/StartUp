@@ -21,8 +21,15 @@ class PaginasController {
         ]);
     }
     public static function contacto(Router $router) {
-        $router->render('paginas/contacto', [
 
+        $tipo = "¿Quieres contactarnos?";
+        $info = "Llena el formulario con tus datos";
+        $other = True;
+
+        $router->render('paginas/contacto', [
+            'tipo' => $tipo,
+            'info' => $info,
+            'other' => $other
         ]);
     }
     public static function portafolio(Router $router) {
