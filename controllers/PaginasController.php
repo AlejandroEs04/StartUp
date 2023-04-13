@@ -6,17 +6,26 @@ use MVC\Router;
 
 class PaginasController {
     public static function index(Router $router) {
-        $router->render('paginas/index', [
 
+        $tipo = "Desarrollo Web";
+        $info = "Para hacer conocer tu empresa";
+        $other = True;
+
+        $router->render('paginas/index', [
+            'tipo' => $tipo,
+            'info' => $info,
+            'other' => $other
         ]);
     }
     public static function nosotros(Router $router) {
 
         $tipo = "Nosotros";
+        $info = "¿Quieres saber mas de nosotros?";
         $other = True;
 
         $router->render('paginas/nosotros', [
             'tipo' => $tipo,
+            'info' => $info,
             'other' => $other
         ]);
     }
@@ -33,8 +42,15 @@ class PaginasController {
         ]);
     }
     public static function portafolio(Router $router) {
-        $router->render('paginas/postafolio', [
 
+        $tipo = "Portafolio";
+        $info = "Conoce nuestros proyectos terminados";
+        $other = True;
+
+        $router->render('paginas/postafolio', [
+            'tipo' => $tipo,
+            'info' => $info,
+            'other' => $other
         ]);
     }
     public static function servicios(Router $router) {

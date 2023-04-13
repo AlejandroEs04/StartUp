@@ -470,6 +470,10 @@ template {
 .servicio-info h2 {
   font-weight: 700;
   font-size: 2.5rem;
+  transition: color ease-out 0.2s;
+}
+.servicio-info h2:hover {
+  color: #15A4F1;
 }
 .servicio-info p {
   margin-top: 0;
@@ -480,6 +484,7 @@ template {
 .imagen-info {
   background-image: url("../img/servicio.webp");
   background-size: cover;
+  min-height: 20rem;
 }
 
 .contenedor-contactanos {
@@ -487,7 +492,6 @@ template {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -529,18 +533,23 @@ template {
 }
 .contenedor-forma textarea {
   height: 15rem;
+  padding: 0.5rem;
 }
 
 .contenedor-texto {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 2rem;
+  margin: 0;
   padding: 1rem 0;
 }
 .contenedor-texto img {
-  width: 70%;
+  width: 100%;
   padding-bottom: 1rem;
+}
+.contenedor-texto .logo-texto {
+  visibility: hidden;
+  width: 0;
 }
 .contenedor-texto p {
   font-weight: 700;
@@ -563,24 +572,46 @@ template {
     justify-content: start;
     margin-top: 3rem;
   }
+  .contenedor-texto {
+    margin-left: 2rem;
+  }
+  .contenedor-texto img {
+    width: 75%;
+  }
+  .contenedor-texto .logo-texto {
+    visibility: visible;
+    width: 80%;
+  }
 }
 .boton-enviar {
   background-color: #15A4F1;
   width: 90%;
   font-size: 1.9rem;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 0.5rem;
   transition: background-color ease-in-out 0.3s;
 }
 
 @media (min-width: 768px) {
   .boton-enviar {
-    width: 20%;
+    font-size: 1.4rem;
+    width: 25%;
   }
 }
 .boton-enviar:hover {
   background-color: #0c86c7;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  justify-content: start;
+}
+.social-media img {
+  width: 3.5rem;
+  margin-right: 3rem;
 }
 
 header {
@@ -627,6 +658,7 @@ header {
 .fondo-header {
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .contenedor-header {
@@ -797,7 +829,7 @@ header {
 }
 
 .contenedor-info-tipo {
-  padding-top: 12rem;
+  padding: 12rem 3rem 0;
   text-align: center;
   position: relative;
 }
@@ -861,12 +893,17 @@ header {
   font-size: 4rem;
 }
 .footer .logo {
-  width: 20%;
+  width: 80%;
   padding: 2rem 0;
 }
 .footer .logo img {
   filter: invert(100%);
   width: 100%;
+}
+@media (min-width: 768px) {
+  .footer .logo {
+    width: 20%;
+  }
 }
 .footer .navegacion {
   visibility: visible;

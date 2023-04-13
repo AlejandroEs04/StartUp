@@ -24,9 +24,14 @@
         </div>
 
         <div class="contenedor-texto">
-            <img src="/../build/img/logo.svg">
+            <img src="/../build/img/logo.svg" alt="Logo" class="logo-texto">
             <p>En breve nos pondremos en contacto con usted.</p>
             <p class="color">Gracias por sus comentarios :D</p>
+            <div class="social-media">
+                <a href="#"><img src="/../build/img/whatsapp.svg" alt="Whatsapp"></a>
+                <a href="#"><img src="/../build/img/facebook.svg" alt="Facebook"></a>
+                <a href="https://github.com/AlejandroEs04"><img src="/../build/img/github.svg" alt="Github"></a>
+            </div>
         </div>
     </div>
 </div>

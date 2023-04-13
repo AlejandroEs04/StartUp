@@ -4,7 +4,6 @@
 
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 @media (min-width: $tablet) {
     .contenedor-contactanos {
@@ -49,6 +48,7 @@
     
     textarea {
         height: 15rem;
+        padding: 0.5rem;
     }
 }
 .contenedor-texto {
@@ -56,12 +56,16 @@
     flex-direction: column;
 
     justify-content: center;
-    margin-left: 2rem;
+    margin: 0;
     padding: 1rem 0;
 
     img {
-        width: 70%;
+        width: 100%;
         padding-bottom: 1rem;
+    }
+    .logo-texto {
+        visibility: hidden;
+        width: 0;
     }
 
     p {
@@ -84,22 +88,46 @@
         justify-content: start;
         margin-top: 3rem;
     }
+    .contenedor-texto {
+        margin-left: 2rem;
+
+        img {
+            width: 75%;
+        }
+        .logo-texto {
+            visibility: visible;
+            width: 80%;
+        }
+    }
 }
 .boton-enviar {
     background-color: $color3;
     width: 90%;
     font-size: 1.9rem;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 0.5rem;
 
     transition: background-color ease-in-out 0.3s;
 }
 @media (min-width: $tablet) {
     .boton-enviar {
-        width: 20%;
+        font-size: 1.4rem;
+        width: 25%;
     }
 }
 .boton-enviar:hover {
     background-color: darken($color: $color3, $amount: 10);
+}
+.social-media {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+
+    justify-content: start;
+
+    img {
+        width: 3.5rem;
+        margin-right: 3rem;
+    }
 }

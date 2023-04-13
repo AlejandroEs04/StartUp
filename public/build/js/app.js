@@ -5,16 +5,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function darkMode() {
-    const preferDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const prefiereDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
 
-    if(preferDark.matches) {
+    // console.log(prefiereDarkMode.matches);
+
+    if(prefiereDarkMode.matches) {
         document.body.classList.add('dark-mode');
-        const modo = document.querySelector('.lighMode');
-        modo.classList.toggle('dark');
     } else {
         document.body.classList.remove('dark-mode');
     }
 
+    prefiereDarkMode.addEventListener('change', function() {
+        if(prefiereDarkMode.matches) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
+    });
 
     const botonDarkMode = document.querySelector('.lighMode');
 
@@ -22,7 +29,7 @@ function darkMode() {
         document.body.classList.toggle('dark-mode');
         const modo = document.querySelector('.lighMode');
         modo.classList.toggle('dark');
-    });
+    })
 }
 
 function iniciarApp() {
