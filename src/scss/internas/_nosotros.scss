@@ -1,0 +1,78 @@
+.contenedor-nosotros {
+    display: flex;
+    flex-direction: column;
+
+    .nosotros-boton {
+        display: flex;
+        justify-content: start;
+        width: 55rem;
+        text-align: center;
+
+        .boton-contacto {
+            background-color: $color3;
+            border-radius: 1rem;
+            padding: 1rem 1rem;
+            border: none;
+
+            transition: background-color linear 0.2s;
+        }
+        .boton-contacto:hover {
+            background-color: darken($color: $color3, $amount: 10);
+        }
+        
+        a {
+            color: $blanco;
+            font-weight: $bold;
+            font-size: 1.8rem;
+        }
+    }
+
+    .nosotros {
+        padding: 1rem 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        p {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .servicio-info {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        font-weight: $bold;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-weight: $bold;
+        font-size: 2.5rem;
+        margin: 0 0 0 2rem;
+    }
+
+    ul {
+        li {
+            font-size: 1.7rem;
+            margin-top: 0.8rem;
+
+            transition: color linear 0.1s 0.1s;
+        }
+        li:hover {
+            color: $color3;
+        }
+    }
+}
+@media (min-width: $tablet) {
+    .contenedor-nosotros {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+    }
+}

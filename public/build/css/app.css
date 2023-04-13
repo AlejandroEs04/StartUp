@@ -21,6 +21,7 @@ a {
 h1, h2, h3 {
   font-family: "Roboto", sans-serif;
   text-align: center;
+  color: #000000;
 }
 
 .contenedor {
@@ -419,7 +420,7 @@ template {
 .dark-mode .servicio-info {
   background-color: #000000;
 }
-.dark-mode h1, .dark-mode p, .dark-mode h2 {
+.dark-mode h1, .dark-mode p, .dark-mode h2, .dark-mode h3, .dark-mode li {
   color: #E6E6E6;
 }
 .dark-mode .servicio-info img {
@@ -472,13 +473,14 @@ template {
   font-size: 2.5rem;
   transition: color ease-out 0.2s;
 }
-.servicio-info h2:hover {
-  color: #15A4F1;
-}
 .servicio-info p {
   margin-top: 0;
   font-weight: 400;
   font-size: 1.7rem;
+}
+
+.servicio-info:hover h2 {
+  color: #15A4F1;
 }
 
 .imagen-info {
@@ -614,6 +616,71 @@ template {
   margin-right: 3rem;
 }
 
+.contenedor-nosotros {
+  display: flex;
+  flex-direction: column;
+}
+.contenedor-nosotros .nosotros-boton {
+  display: flex;
+  justify-content: start;
+  width: 55rem;
+  text-align: center;
+}
+.contenedor-nosotros .nosotros-boton .boton-contacto {
+  background-color: #15A4F1;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  border: none;
+  transition: background-color linear 0.2s;
+}
+.contenedor-nosotros .nosotros-boton .boton-contacto:hover {
+  background-color: #0c86c7;
+}
+.contenedor-nosotros .nosotros-boton a {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.contenedor-nosotros .nosotros {
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.contenedor-nosotros .nosotros p {
+  margin-top: 0.5rem;
+}
+.contenedor-nosotros .servicio-info {
+  padding: 3rem 1rem;
+}
+.contenedor-nosotros h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.contenedor-nosotros p {
+  font-size: 2rem;
+}
+.contenedor-nosotros h3 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0 0 0 2rem;
+}
+.contenedor-nosotros ul li {
+  font-size: 1.7rem;
+  margin-top: 0.8rem;
+  transition: color linear 0.1s 0.1s;
+}
+.contenedor-nosotros ul li:hover {
+  color: #15A4F1;
+}
+
+@media (min-width: 768px) {
+  .contenedor-nosotros {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+}
 header {
   background-image: url("/../build/img/fondoHeader1.webp");
   background-position: center;
@@ -639,7 +706,7 @@ header {
   justify-content: center;
 }
 .contenedor-logo .logo {
-  width: 70%;
+  width: 60%;
 }
 .contenedor-logo .logo img {
   margin-bottom: 0;
@@ -652,7 +719,7 @@ header {
     justify-content: start;
   }
   .contenedor-logo .logo {
-    width: 60%;
+    width: 50%;
   }
 }
 .fondo-header {

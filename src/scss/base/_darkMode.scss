@@ -9,11 +9,13 @@
         background-color: $negro;
     }
 
-    h1, p, h2 {
+    h1, p, h2, h3, li {
         color: $dark3;
     }
 
     .servicio-info {
+
+        
         img {
             position: relative;
             z-index: 0;

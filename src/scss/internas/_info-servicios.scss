@@ -29,13 +29,15 @@
 
         transition: color ease-out 0.2s;
     }
-    h2:hover {
-        color: $color3;
-    }
     p {
         margin-top: 0;
         font-weight: $regular;
         font-size: 1.7rem;
+    }
+}
+.servicio-info:hover {
+    h2 {
+        color: $color3;
     }
 }
 .imagen-info {

@@ -10,7 +10,6 @@ body {
     margin: 0;
 
     background-color: $color5;
-
 }
 a {
     text-decoration: none;
@@ -18,6 +17,7 @@ a {
 h1, h2, h3 {
     font-family: $fuente_principal;
     text-align: center;
+    color: $negro;
 }
 .contenedor {
     margin: 1rem;
