@@ -1,7 +1,7 @@
 <div class="contenedor">
     <div class="contenedor-contactanos">
         <div class="contenedor-contacto">
-            <form class="formulario">
+            <form class="formulario" method="POST" action="/contacto">
                 <fieldset class="contenedor-forma">
                     <legend>Informacion de contacto</legend>
 
@@ -12,10 +12,10 @@
                     <input type="text" name="apellido" placeholder="Apellido">
 
                     <label>Comentarios</label>
-                    <textarea name="comentario"></textarea>
+                    <textarea name="comentario" value="comentario"></textarea>
 
                     <label>Correo Electronico</label>
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="email" name="correo" placeholder="Email">
                 </fieldset>
                 <div class="contenedor-boton">
                     <input type="submit" class="boton-enviar" value="Enviar Comentario">

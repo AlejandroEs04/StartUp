@@ -587,6 +587,9 @@ template {
 }
 .boton-enviar {
   background-color: #15A4F1;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 2.5rem;
   width: 90%;
   font-size: 1.9rem;
   border: none;

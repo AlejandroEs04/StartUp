@@ -27,7 +27,7 @@
                     <a href="/nosotros">Nosotros</a>
                     <div class="nav-servicio">
                         <div class="a-servicio">
-                            <a href="#servicios">Servicios</a>
+                            <a href="/#servicios">Servicios</a>
                             <img src="/../build/img/flecha.svg">
                         </div>
                         <div class="a-servicios">

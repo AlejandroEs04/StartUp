@@ -45,7 +45,7 @@
                 <div class="servicio-info">
                     <img src="/../build/img/config.gif">
                     <h2>Administracion completa</h2>
-                    <p>Capacidad de poder administrar su pagina web de forma directa, sin necesidad de gastos de actualizacion</p>
+                    <p>Capacidad de poder administrar su pagina web de forma directa.</p>
                 </div>
 
                 <div class="servicio-info">

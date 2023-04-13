@@ -2,6 +2,8 @@
 
 namespace Controllers;
 
+use Classes\Send;
+use Model\Email;
 use MVC\Router;
 
 class PaginasController {
@@ -30,6 +32,19 @@ class PaginasController {
         ]);
     }
     public static function contacto(Router $router) {
+
+        $email = new Email($_POST);
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $email->sincronizar($_POST);
+
+            $errores = $email->validar();
+
+            if(empty($errores)) {
+                $email = new Send($email->nombre, $email->apellido, $email->comentario, $email->correo, $email->fecha);
+                $email->enviarCorreo();
+            }
+        }
 
         $tipo = "¿Quieres contactarnos?";
         $info = "Llena el formulario con tus datos";
