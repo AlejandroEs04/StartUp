@@ -684,7 +684,65 @@ template {
     align-items: center;
   }
 }
-header {
+@media (min-width: 768px) {
+  .admin-header {
+    height: 9rem;
+  }
+}
+.contenido-admin {
+  text-align: center;
+}
+.contenido-admin h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+.contenido-admin p {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 5rem;
+}
+
+.boton {
+  background-color: #15A4F1;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.5rem;
+  width: 20rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: none;
+  transition: color linear 0.2s, background-color linear 0.2s, border linear 0.2s;
+}
+.boton a {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.boton:hover {
+  border: 1px solid #15A4F1;
+  background-color: transparent;
+}
+.boton:hover a {
+  color: #15A4F1;
+}
+
+.boton-mediano {
+  width: 15rem;
+}
+
+.boton-chico {
+  width: 10rem;
+}
+
+.header {
   background-image: url("/../build/img/fondoHeader1.webp");
   background-position: center;
   background-size: cover;
@@ -763,7 +821,7 @@ header {
     align-items: center;
   }
 }
-.nav {
+.nav, .admin-nav {
   background-color: #000000;
 }
 

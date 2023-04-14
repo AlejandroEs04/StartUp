@@ -1,4 +1,4 @@
-header {
+.header {
     background-image: url("/../build/img/fondoHeader1.webp");
     background-position: center;
     background-size: cover;
@@ -76,7 +76,7 @@ header {
         align-items: center;
     }
 }
-.nav {
+.nav, .admin-nav {
     background-color: $color1;
 }
 .navegacion {

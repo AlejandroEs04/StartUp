@@ -9,9 +9,9 @@
     <title>WebNano</title>
 </head>
 <body>
-    <header class="header" id="fondo">
+    <header class="<?php if(!$admin) { echo "header"; } else { echo "admin-header"; } ?>" id="fondo">
         <div class="fondo-header">
-            <div class="contenedor contenedor-header" id="nav">
+            <div class="contenedor contenedor-header <?php if($admin) { echo "admin-nav"; } ?>" id="nav">
                 <div class="contenedor-logo">
                     <a href="/" class="logo">
                         <img src="/../build/img/logo.svg">
@@ -24,6 +24,7 @@
 
                 <nav class="navegacion">
                     <a href="/">Inicio</a>
+                    <?php if(!$admin) {?>
                     <a href="/nosotros">Nosotros</a>
                     <div class="nav-servicio">
                         <div class="a-servicio">
@@ -37,6 +38,11 @@
                     </div>
                     <a href="/contacto">Contactanos</a>
                     <a href="/portafolio">Portafolio</a>
+                    <?php } else { ?>
+                        <a href="/admin">Administrador</a>
+                        <a href="/servicios">Servicios</a>
+                        <a href="/logout">Logout</a>
+                    <?php } ?>
                 </nav>
             </div>
         </div>

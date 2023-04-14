@@ -39,6 +39,7 @@ function iniciarApp() {
 function navegacionFija() {
     const nav = document.querySelector('.contenedor-header');
     const header = document.querySelector('.header');
+    const header1 = document.querySelector('.admin-header');
 
     window.addEventListener('scroll', function() {
         if(header.getBoundingClientRect().bottom < 0) {

@@ -4,8 +4,10 @@
             <h2>Quienes somos?</h2>
             <p>Somos una empresa desarrolladora de sitios web y proximamente de aplicaciones para cualquier negocio o empresa, tratamos de dar el mejor servicio a nuestros usuarios. </p>
             <p>Estamos dedicados al desarrollo, y buscamos mejorar cada vez mas para buscar una mejor satisfaccion, y una mejor calidad de servicio y de software.</p>
-            <div class="nosotros-boton">
-                <a href="/contacto" class="boton-contacto">Contactenos</a>
+            <div class="acciones">
+                <div class="boton">
+                    <a href="/contacto">Contactactenos</a>
+                </div>
             </div>
         </div>
         <div class="tarjeta-nosotros">
