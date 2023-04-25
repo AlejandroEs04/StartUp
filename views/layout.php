@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
     <link rel="icon" href="../build/img/Logo-pes.ico">
-    <title>WebNano</title>
+    <title>WebNano.co</title>
 </head>
 <body>
     <header class="<?php if(!$admin) { echo "header"; } else { echo "admin-header"; } ?>" id="fondo">
