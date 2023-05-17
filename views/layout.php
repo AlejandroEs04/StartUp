@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
     <link rel="icon" href="../build/img/Logo-pes.ico">
-    <title>WebNano.co</title>
+    <title>DD-Code.com</title>
 </head>
 <body>
     <header class="<?php if(!$admin) { echo "header"; } else { echo "admin-header"; } ?>" id="fondo">
@@ -16,10 +16,10 @@
                     <a href="/" class="logo">
                         <img src="/../build/img/logo.svg">
                     </a>
-                    <div class="modos">
+                    <div class="nav-hide">
                         <div class="imagen-nav"><img src="/../build/img/icono-hamburguesa.svg" class="nav-boton"></div>
-                        <div class="lighMode"></div>
                     </div>
+                    
                 </div>
 
                 <nav class="navegacion">

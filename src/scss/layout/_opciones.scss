@@ -1,0 +1,54 @@
+.opciones-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $negro;
+    border-radius: 1.5rem;
+    margin: 2rem 0;
+    padding: 3rem;
+    color: $blanco;
+    text-align: center;
+
+    h3 {
+        font-weight: $bold;
+        font-size: 2.5rem;
+        color: $blanco;
+        margin-top: 0;
+    }
+
+    img {
+        filter: invert(100);
+        width: 4rem;
+    }
+}
+@media (min-width: $tablet) {
+    .opciones-contacto {
+        margin: 0 0 0 5rem;
+    }
+}
+.index-contacto-media {
+    display: flex;
+    flex-direction: column;
+}
+.icono-index {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 2rem;
+    }
+}
+.texto-contacto {
+    p {
+        font-size: 2rem;
+        margin: 0;
+        margin-top: 4rem;
+    }
+    .color {
+        color: $color3;
+        margin: 0;
+    }
+}

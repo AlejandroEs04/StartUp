@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     eventListener();
     iniciarApp();
-    darkMode();
+    //darkMode();
 });
 
 function darkMode() {
@@ -23,7 +23,7 @@ function darkMode() {
         }
     });
 
-    const botonDarkMode = document.querySelector('.lighMode');
+    const botonDarkMode = document.querySelector('.contenedor-modos');
 
     botonDarkMode.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');

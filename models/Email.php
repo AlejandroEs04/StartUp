@@ -3,33 +3,35 @@
 namespace Model;
 
 class Email extends ActiveRecord {
-    public $nombre;
-    public $apellido;
-    public $comentario;
-    public $correo;
-    public $fecha;
+    public $name;
+    public $lastName;
+    public $email;
+    public $message;
+    public $fecha; 
 
     public function __construct($args = []) {
-        $this->nombre = $args['nombre'] ?? '';
-        $this->apellido = $args['apellido'] ?? '';
-        $this->comentario = $args['comentario'] ?? '';
-        $this->correo = $args['correo'] ?? '';
+        $this->name = $args['name'] ?? '';
+        $this->lastName = $args['lastName'] ?? '';
+        $this->email = $args['email'] ?? '';
+        $this->message = $args['message'] ?? '';
         $this->fecha = date('Y/m/d');
     }
 
     public function validar() {
-        if(!$this->nombre) {
-            self::$errores[] = "El nombre es oblitatorio";
+        if(!$this->name) {
+            self::$errores[] = "Name is required";
         }
-        if(!$this->apellido) {
-            self::$errores[] = "El apellido es oblitatorio";
+        if(!$this->lastName) {
+            self::$errores[] = "Last Name is required";
         }
-        if(!$this->comentario) {
-            self::$errores[] = "El comentario es oblitatorio";
+        if(!$this->email) {
+            self::$errores[] = "Email is required";
         }
-        if(!$this->correo) {
-            self::$errores[] = "El correo es oblitatorio";
+        if(!$this->message) {
+            self::$errores[] = "Message is required";
         }
+        
+
         return self::$errores;
     }
 }

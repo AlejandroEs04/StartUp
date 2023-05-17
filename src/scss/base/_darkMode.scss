@@ -42,4 +42,11 @@
             filter: invert(100%);
         }
     }
+
+    .contenedor-modos {
+        background-image: url("/../build/img/night.jpg");
+    }
+    .modos {
+        justify-content: end;
+    }
 }

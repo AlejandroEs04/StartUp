@@ -1,0 +1,68 @@
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+}
+.form-auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $blanco;
+}
+.formulario-admin {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    input {
+        border: none;
+        padding-bottom: 0.5rem;
+    }
+    input:not(:last-child) {
+        border-bottom: 2px solid $negro;
+        margin-bottom: 2rem;
+    }
+    legend {
+        font-size: 2.5rem;
+        font-weight: $bold;
+        color: $color3;
+        margin-bottom: 3rem;
+    }
+    label {
+        font-size: 1.5rem;
+        font-weight: $bold;
+        margin-bottom: 1.3rem;
+    }
+}
+.contenedor-auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: $dark1;
+    padding: 4rem;
+    h2 {
+        color: $color3;
+        font-size: 4rem;
+        font-weight: $bold;
+        margin: 0;
+    }
+    p {
+        color: $blanco;
+        font-size: 2.5rem;
+        margin: 0;
+    }
+}
+.boton-enviar {
+    border: 1px solid $color3;
+    input { 
+        border: none;
+    }
+    width: 10rem;
+    height: 5rem;
+    padding: 0;
+}
+.boton-enviar:hover {
+    color: $negro;
+}

@@ -19,8 +19,15 @@ class Router {
 
         // Comprobar si el usuario inicia sesion para entrar a admin
         /** verificar si utilizare admin **/
+        $auth = $_SESSION['login'] ?? null;
 
         // Arreglo de rutas protegidas
+        $rutas_protegidas = [
+            '/admin',
+            '/crear/servicios',
+            '/crear/plan',
+            '/correos'
+        ];
 
         // Identificar que rutas se encuentra el usuario
         $urlActual = $_SERVER['PATH_INFO'] ?? '/';
@@ -35,6 +42,9 @@ class Router {
         }
 
         // Proteger las rutas
+        if(in_array($urlActual, $rutas_protegidas) && !$auth) {
+            header('Location: /');
+         }
 
         // Verificar que la ruta exista o no 
         if($fn) {

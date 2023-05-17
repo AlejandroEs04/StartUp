@@ -1,6 +1,7 @@
 .contenedor-contactanos {
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     justify-content: center;
     align-items: center;
@@ -9,7 +10,7 @@
     .contenedor-contactanos {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        margin: 3rem 10%;
+        margin: 1rem 10%;
         padding: 1rem 7rem;
     
         justify-content: center;
@@ -18,6 +19,7 @@
 }
 .contenedor-contacto {
     width: 100%;
+    text-align: start;
 }
 .contenedor-forma {
     width: 100%;

@@ -34,9 +34,9 @@ class ActiveRecord {
     $atributos = $this->sanitizarAtributos();
 
     // Insertar en la base de datos
-    $query = " INSERT INTO " . static::$tabla . " ( ";
+    $query = " INSERT INTO " . static::$tabla . " (";
     $query .= join(', ', array_keys($atributos));
-    $query .= " ) VALUES (' ";
+    $query .= " ) VALUES ('";
     $query .= join("' , '", array_values($atributos));
     $query .= " ') ";
 
@@ -61,6 +61,14 @@ class ActiveRecord {
       }
 
       return $atributos;
+  }
+
+  public static function getErrores() {
+    return static::$errores;
+  }
+  public function validar() {
+    static::$errores = [];
+    return static::$errores;
   }
 
   public function sanitizarAtributos() {

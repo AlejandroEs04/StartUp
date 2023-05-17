@@ -1,32 +1,27 @@
 <div class="contenedor">
     <div class="contenedor-contactanos">
         <div class="contenedor-contacto">
-            <form class="formulario" method="POST" action="/contacto">
-                <fieldset class="contenedor-forma">
-                    <legend>Informacion de contacto</legend>
-
-                    <label>Nombre</label>
-                    <input type="text" name="nombre" placeholder="Nombre">
-                    
-                    <label>Apellido</label>
-                    <input type="text" name="apellido" placeholder="Apellido">
-
-                    <label>Comentarios</label>
-                    <textarea name="comentario" value="comentario"></textarea>
-
-                    <label>Correo Electronico</label>
-                    <input type="email" name="correo" placeholder="Email">
-                </fieldset>
-                <div class="contenedor-boton">
-                    <input type="submit" class="boton-enviar" value="Enviar Comentario">
+            <?php foreach($errores as $error): ?>
+                <div class="alerta error">
+                    <?php echo $error; ?>
                 </div>
-            </form>
+            <?php endforeach; ?>
+
+            <?php 
+                if($resultado):
+                    $mensaje = mostrarNotificacion( intval( $resultado) );
+                    if($mensaje): ?>
+                        <p class="alerta exito"><?php echo $mensaje; ?></p>
+                    <?php endif;
+                endif;
+            ?>
+            <?php incluirTemplate('formulario'); ?>
         </div>
 
         <div class="contenedor-texto">
             <img src="/../build/img/logo.svg" alt="Logo" class="logo-texto">
             <p>En breve nos pondremos en contacto con usted.</p>
-            <p class="color">Gracias por sus comentarios :D</p>
+            <p class="color">Gracias por sus contactarnos :D</p>
             <div class="social-media">
                 <a href="#"><img src="/../build/img/whatsapp.svg" alt="Whatsapp"></a>
                 <a href="#"><img src="/../build/img/facebook.svg" alt="Facebook"></a>

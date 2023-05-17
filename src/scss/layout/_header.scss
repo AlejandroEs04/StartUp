@@ -4,6 +4,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 30rem;
+
+    padding-bottom: 10rem;
 }
 @media (min-width:$tablet) {
     .header {
@@ -243,10 +245,33 @@
     opacity: 0;
     display: block;
 }
+.nav-hide {
+    margin-top: 1rem;
+}
+.contenedor-modos {
+    background-image: url("/../build/img/sky.jpg");
+    background-position: cover;
+    background-repeat: no-repeat;
+    width: 7rem;
+    height: 3.4rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+@media (min-width: $tablet) {
+    .nav-hide {
+        margin: 0;
+    }
+    .contenedor-modos {
+        margin-left: 1rem;
+    }
+}
 .modos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
 }
 .imagen-nav {
     img {
@@ -257,11 +282,18 @@
     }
 }
 .lighMode {
-    background-image: url("/../build/img/sun.svg");
-    filter: invert(100%);
+    width: 2.2rem;
+    height: 2.2rem;
+    background-image: url("/../build/img/moon.svg");
+    border: none;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 .dark {
-    background-image: url("/../build/img/moon.svg");
+    
+    background-image: url("/../build/img/sun.svg");
+}
+.nav-hide {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
