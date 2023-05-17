@@ -11,7 +11,7 @@
         <label>Correo Electronico</label>
         <input type="email" name="contacto[email]" placeholder="Email">
 
-        <label>Comentarios</label>
+        <label>Mensaje</label>
         <textarea name="contacto[message]" value="comentario"></textarea>
     </fieldset>
     <div class="contenedor-boton">

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
-    <link rel="icon" href="../build/img/Logo-pes.ico">
+    <link rel="icon" href="../build/img/Icono.ico">
     <title>DD-Code.com</title>
 </head>
 <body>

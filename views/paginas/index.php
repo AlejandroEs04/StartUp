@@ -1,7 +1,7 @@
 <main class="contenedor" id="main">
     <div class="informacion">
         <h2>Ofrecemos</h2>
-        <div class="servicios">
+        <div class="servicios ofrecemos">
             <div class="servicio">
                 <h2>Desarrollo Web</h2>
                 <p>Ofrecemos un servicio de front end, back end y base de datos en el desarrollo de paginas web, para su empresa, negocio y/o compania</p>
@@ -74,7 +74,7 @@
                 <a href="/planes?plan=2">Saber Mas</a>
             </div>
 
-            <div class="paquete">
+            <div class="paquete" id="ultimo">
                 <h3>Plan Pro</h3>
                 <p>Precio: <span>$35,000 mxn</span></p>
                 <a href="/planes?plan=3">Saber Mas</a>
@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="input-contacto" id="mensaje">
-                    <label>Comentarios</label>
+                    <label>Mensaje</label>
                     <textarea name="contacto[message]" value="comentario"></textarea>
                 </div>
 

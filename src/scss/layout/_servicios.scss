@@ -21,7 +21,22 @@
 @media (min-width: $tablet) {
     .servicios {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .ofrecemos {
         grid-template-columns: repeat(3, 1fr);
+    }
+    #ultimo {
+        grid-column: 1/3;
+    }
+}
+@media (min-width: $desktop) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #ultimo {
+        grid-column: auto;
     }
 }
 .servicio {
@@ -99,3 +114,4 @@
         }
     }
 }
+
