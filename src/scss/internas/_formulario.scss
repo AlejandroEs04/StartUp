@@ -56,8 +56,10 @@
 .contenedor-texto {
     display: flex;
     flex-direction: column;
+    text-align: center;
 
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 1rem 0;
 
@@ -92,6 +94,8 @@
     }
     .contenedor-texto {
         margin-left: 2rem;
+        text-align: start;
+        align-items: start;
 
         img {
             width: 75%;

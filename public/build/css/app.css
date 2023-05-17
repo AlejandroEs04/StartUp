@@ -581,7 +581,9 @@ template {
 .contenedor-texto {
   display: flex;
   flex-direction: column;
+  text-align: center;
   justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 1rem 0;
 }
@@ -616,6 +618,8 @@ template {
   }
   .contenedor-texto {
     margin-left: 2rem;
+    text-align: start;
+    align-items: start;
   }
   .contenedor-texto img {
     width: 75%;
@@ -1171,6 +1175,7 @@ template {
 .footer .logo img {
   filter: invert(100%);
   width: 100%;
+  max-width: 25rem;
 }
 @media (min-width: 768px) {
   .footer .logo {
