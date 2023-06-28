@@ -24,7 +24,7 @@
         <div class="servicios-ofrecemos">
             <h2>Nuestros Servicios</h2>
             <div class="servicios">
-                <div class="servicio-info">
+                <div class="servicio-info text-alignLeft">
                     <img src="/../build/img/monitor.gif">
                     <h2>Paginas Web</h2>
                     <p>Buscamos crear paginas bien diseñadas y oprimizadas, para que tu negocio crezca y se posicione mejor en el mercado</p>
@@ -59,92 +59,9 @@
         </div>
     </div>
 
-    <div class="informacion planes">
-        <h2>Planes disponibles</h2>
-        <div class="servicios paquetes">
-            <div class="paquete">
-                <h3>Plan Basico</h3>
-                <p>Precio: <span>$8,000 mxn</span></p>
-                <a href="/planes?plan=1">Saber Mas</a>
-            </div>
+   <?php incluirTemplateArray('planes', $planes); ?>
 
-            <div class="paquete">
-                <h3>Plan Intermedio</h3>
-                <p>Precio: <span>$15,000 mxn</span></p>
-                <a href="/planes?plan=2">Saber Mas</a>
-            </div>
+   <?php incluirTemplateArray('contacto', $planes); ?>
 
-            <div class="paquete" id="ultimo">
-                <h3>Plan Pro</h3>
-                <p>Precio: <span>$35,000 mxn</span></p>
-                <a href="/planes?plan=3">Saber Mas</a>
-            </div>
-        </div>
-        <p>Tambien, puedes ponerte en contacto con nosotros para una cotizacion:D</p>
-    </div>
-
-    <div class="contenedor-contacto-index">
-        <div>
-            <h2>Contactanos</h2>
-            <?php foreach($errores as $error): ?>
-                <div class="alerta error">
-                    <?php echo $error; ?>
-                </div>
-            <?php endforeach; ?>
-
-            <?php 
-                if($resultado):
-                    $mensaje = mostrarNotificacion( intval( $resultado) );
-                    if($mensaje): ?>
-                        <p class="alerta exito"><?php echo $mensaje; ?></p>
-                    <?php endif;
-                endif;
-            ?>
-            <form class="formulario-index" method="POST" action="/">
-                
-                <div class="input-contacto">
-                    <label>Nombre</label>
-                    <input type="text" name="contacto[name]" placeholder="Nombre">
-                </div>
-                                
-                <div class="input-contacto">
-                    <label>Apellido</label>
-                    <input type="text" name="contacto[lastName]" placeholder="Apellido">
-                </div>
-
-                <div class="input-contacto" id="correo">
-                    <label>Correo Electronico</label>
-                    <input type="email" name="contacto[email]" placeholder="Email">
-                </div>
-
-                <div class="input-contacto" id="mensaje">
-                    <label>Mensaje</label>
-                    <textarea name="contacto[message]" value="comentario"></textarea>
-                </div>
-
-                <div class="contenedor-boton">
-                    <input type="submit" class="boton-enviar" value="Enviar">
-                </div>
-            </form>
-        </div>
-
-        <div class="opciones-contacto">
-            <h3>Tambien puedes contactarnos por</h3>
-            <div class="social-media index-contacto-media">
-                <div class="icono-index">
-                    <a href="#"><img src="/../build/img/whatsapp.svg" alt="Whatsapp"></a>
-                    <p>Whatsapp</p>
-                </div>
-
-                <div class="icono-index">
-                    <a href="#"><img src="/../build/img/facebook.svg" alt="Facebook"></a>
-                    <p>Facebook</p>
-                </div>
-            </div>
-            <div class="texto-contacto">
-                <p>En breve nos pondremos en contacto con usted.</p>
-                <p class="color">Gracias por sus contactarnos :D</p>
-            </div>
-        </div>
-    </div>
+    
 </main>

@@ -2,8 +2,14 @@
 
 define('TEMPLATES_URL', __DIR__ . '/templates');
 define('FUNCIONES_URL', __DIR__ . 'funciones.php');
+define('CARPETAS_IMAGENES', $_SERVER['DOCUMENT_ROOT'] . '/imagenes/');
 
 function incluirTemplate( string $nombre ) {
+    include TEMPLATES_URL . "/${nombre}.php";
+}
+
+function incluirTemplateArray( string $nombre, $info) {
+    $_POST["info"] = $info;
     include TEMPLATES_URL . "/${nombre}.php";
 }
 
@@ -19,15 +25,7 @@ function mostrarNotificacion($resultado) {
 
     switch($resultado) { 
         case 1:
-            $mensaje = 'Creado Correctamente';
-        break;
-
-        case 2:
-            $mensaje = 'Actualizado Correctamente';
-        break;
-
-        case 3:
-            $mensaje = 'Eliminado Correctamente';
+            $mensaje = 'Mensaje enviado correctamente';
         break;
 
         default:

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../build/css/app.css">
     <link rel="icon" href="../build/img/Icono.ico">
-    <title>DD-Code.com</title>
+    <title>DD-Code</title>
 </head>
 <body>
     <header class="<?php if(!$admin) { echo "header"; } else { echo "admin-header"; } ?>" id="fondo">
@@ -32,12 +32,12 @@
                             <img src="/../build/img/flecha.svg">
                         </div>
                         <div class="a-servicios">
-                            <a href="#">Sitios Web</a>
-                            <a href="#">Tiendas Virtuales</a>
+                            <?php foreach($servicios as $servicio): ?>
+                                <a href="/servicio?id=<?php echo $servicio->id; ?>"><?php echo $servicio->nombre; ?></a>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <a href="/contacto">Contactanos</a>
-                    <a href="/portafolio">Portafolio</a>
                     <?php } else { ?>
                         <a href="/admin">Administrador</a>
                         <a href="/servicios">Servicios</a>
@@ -56,7 +56,9 @@
             <?php } ?>
     </header>
 
-    <?php echo $contenido; ?>
+    <main>
+        <?php echo $contenido; ?>
+    </main>    
 
     <footer class="footer">
         <a href="/" class="logo">
@@ -69,6 +71,7 @@
                 <a href="/portafolio">Portafolio</a>
         </nav>
     </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="/build/js/app.js"></script>
 </body>
 </html>

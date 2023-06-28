@@ -3,9 +3,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 30rem;
-
-    padding-bottom: 10rem;
+    height: min-content;
 }
 @media (min-width:$tablet) {
     .header {
@@ -23,8 +21,8 @@
     justify-content: center;
 
     .logo {
-        width: auto;
-        max-width: 20rem;
+        width: 90%;
+        max-width: 25rem;
 
         img {
             margin-bottom: 0;
@@ -36,7 +34,7 @@
         flex-direction: row;
 
         .logo {
-            max-width: 35rem;
+            max-width: 30rem;
         }
     }
 }
@@ -54,6 +52,7 @@
 .fondo-header {
     position: fixed;
     width: 100%;
+    height: min-content;
     z-index: 2;
 }
 
@@ -62,9 +61,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: none;
     margin: 0;
-    padding: 2rem 5rem;
+    padding: 1.5rem 2rem;
+    border: none;
+    height: min-content;
     img {
         width: 3rem;
         margin-bottom: 1rem;
@@ -89,7 +89,9 @@
     }
 }
 .nav, .admin-nav {
-    background-color: $color1;
+    background-color: #00000096;
+    backdrop-filter: blur(35px);
+    box-shadow: 0px 10px 10px #00000048;
 }
 .navegacion {
     visibility: hidden;
@@ -160,7 +162,6 @@
     .contenedor-header {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
 
         h1 {
             padding-bottom: 0;
@@ -175,16 +176,10 @@
         visibility: visible;
         opacity: 1;
         margin-top: 0;
-        width: 70%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
-    }
-}
-@media (min-width: $desktop) {
-    .navegacion {
-        width: 50%;
+        gap: 4rem;
     }
 }
 .contenedor-ofrecemos {
@@ -232,7 +227,7 @@
     font-weight: $regular;
 }
 .contenedor-info-tipo {
-    padding: 12rem 3rem 0;
+    padding: 12rem 3rem;
     text-align: center;
     position: relative;
 

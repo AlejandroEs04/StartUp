@@ -33,15 +33,41 @@ h1, h2, h3 {
   color: #000000;
 }
 
+h1 {
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
 h2 {
   font-weight: 700;
   font-size: 3rem;
-  margin: 1rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 2rem;
 }
 
 .contenedor {
-  margin: 2rem 2%;
-  padding: 2rem 2%;
+  margin: 2rem 10%;
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    margin: 2rem 2%;
+  }
+}
+.contenedor-contenido {
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.widthAuto {
+  width: auto;
 }
 
 .error, .exito {
@@ -60,6 +86,37 @@ h2 {
 
 .exito {
   color: green;
+}
+
+.grid2 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+.bg-blanco {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.bg-gray {
+  background-color: #424242;
+  color: #FFFFFF;
 }
 
 /* Document
@@ -527,6 +584,10 @@ template {
   min-height: 20rem;
 }
 
+.text-alignLeft h1, .text-alignLeft h2, .text-alignLeft h3, .text-alignLeft p {
+  text-align: left;
+}
+
 .contenedor-contactanos {
   display: flex;
   flex-direction: column;
@@ -721,7 +782,7 @@ template {
   color: #15A4F1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .contenedor-nosotros {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -844,13 +905,17 @@ template {
   font-size: 1.6rem;
 }
 
+.errorPage {
+  height: 100vh;
+  background-color: black;
+}
+
 .header {
   background-image: url("/../build/img/fondoHeader1.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30rem;
-  padding-bottom: 10rem;
+  height: min-content;
 }
 
 @media (min-width: 768px) {
@@ -870,8 +935,8 @@ template {
   justify-content: center;
 }
 .contenedor-logo .logo {
-  width: auto;
-  max-width: 20rem;
+  width: 90%;
+  max-width: 25rem;
 }
 .contenedor-logo .logo img {
   margin-bottom: 0;
@@ -882,7 +947,7 @@ template {
     flex-direction: row;
   }
   .contenedor-logo .logo {
-    max-width: 35rem;
+    max-width: 30rem;
   }
 }
 @media (min-width: 1024px) {
@@ -898,6 +963,7 @@ template {
 .fondo-header {
   position: fixed;
   width: 100%;
+  height: min-content;
   z-index: 2;
 }
 
@@ -906,9 +972,10 @@ template {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: none;
   margin: 0;
-  padding: 2rem 5rem;
+  padding: 1.5rem 2rem;
+  border: none;
+  height: min-content;
   transition: background-color ease-in-out 0.2s;
 }
 .contenedor-header img {
@@ -934,7 +1001,9 @@ template {
   }
 }
 .nav, .admin-nav {
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.5882352941);
+  backdrop-filter: blur(35px);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2823529412);
 }
 
 .navegacion {
@@ -1001,7 +1070,6 @@ template {
   .contenedor-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
   .contenedor-header h1 {
     padding-bottom: 0;
@@ -1015,16 +1083,10 @@ template {
     visibility: visible;
     opacity: 1;
     margin-top: 0;
-    width: 70%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-  }
-}
-@media (min-width: 1024px) {
-  .navegacion {
-    width: 50%;
+    gap: 4rem;
   }
 }
 .contenedor-ofrecemos {
@@ -1073,7 +1135,7 @@ template {
 }
 
 .contenedor-info-tipo {
-  padding: 12rem 3rem 0;
+  padding: 12rem 3rem;
   text-align: center;
   position: relative;
 }
@@ -1223,7 +1285,7 @@ template {
   flex-direction: column;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .servicios {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1261,7 +1323,7 @@ template {
   font-size: 1.7rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .servicio {
     border-bottom: none;
     border-right: 3px solid #15A4F1;
@@ -1283,7 +1345,7 @@ template {
   border-bottom: 3px solid #15A4F1;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .division {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1320,6 +1382,17 @@ template {
 .informacion-contenedor .tegnologias .tegnologia p {
   font-weight: 400;
   font-size: 1.7rem;
+}
+
+.imagenServicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+.imagenServicio img {
+  width: 100%;
+  max-width: 45rem;
 }
 
 .contenedor-grid {
@@ -1410,6 +1483,20 @@ template {
   margin: 0;
 }
 
+.contenedor-plan {
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+.contenedor-plan .contenedor-contenido {
+  display: flex;
+  align-items: center;
+}
+.contenedor-plan span {
+  font-weight: 700;
+}
+
 .paquete {
   margin: 2rem 0;
   padding: 5rem 0;
@@ -1455,11 +1542,50 @@ template {
   color: #15A4F1;
 }
 
+.flex30 {
+  height: min-content;
+}
+
 @media (min-width: 768px) {
   .paquete {
     margin: 2rem;
   }
+  .flex30 {
+    width: 20%;
+  }
+  .flex70 {
+    width: 80%;
+  }
 }
+.contenedor-descripcion {
+  margin: 2rem;
+}
+.contenedor-descripcion h3 {
+  margin: 1rem;
+}
+
+.contenedor-tabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabla-plane {
+  width: 80%;
+  text-align: left;
+  font-size: 2rem;
+  border-collapse: collapse;
+  border: 3px solid #15A4F1;
+}
+.tabla-plane th {
+  width: 70%;
+}
+.tabla-plane th, .tabla-plane td {
+  padding: 1rem;
+  border: 2px solid #000000;
+}
+
 .opciones-contacto {
   display: flex;
   flex-direction: column;

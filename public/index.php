@@ -19,7 +19,7 @@ $router->post('/contacto', [PaginasController::class, 'contacto']);
 $router->get('/portafolio', [PaginasController::class, 'portafolio']);
 $router->get('/servicios', [PaginasController::class, 'servicios']);
 $router->get('/servicio', [PaginasController::class, 'servicio']);
-$router->get('/planes', [PlanesController::class, 'planes']);
+$router->get('/planes', [PaginasController::class, 'plan']);
 
 /** Zona de Administrador **/
 $router->get('/admin', [AdminController::class, 'index']);

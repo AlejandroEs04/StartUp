@@ -4,18 +4,22 @@ namespace Model;
 
 class Planes extends ActiveRecord {
     protected static $tabla = 'planes';
-    protected static $columnasDB = ['id', 'plan', 'costo', 'descripcion'];
+    protected static $columnasDB = ['id', 'plan', 'costo', 'descripcion', 'secciones', 'mantenimiento'];
 
     public $id;
     public $plan;
     public $costo;
     public $descripcion;
+    public $secciones;
+    public $mantenimiento;
 
     public function __construct($args = []) {
         $this->id = $args['id'] ?? null;
         $this->plan = $args['plan'] ?? '';
         $this->costo = $args['costo'] ?? '';
         $this->descripcion = $args['descripcion'] ?? '';
+        $this->secciones = $args['secciones'] ?? '';
+        $this->mantenimiento = $args['mantenimiento'] ?? '';
     }
 
     public function validar() {

@@ -31,14 +31,35 @@ h1, h2, h3 {
     text-align: center;
     color: $negro;
 }
+h1 {
+    font-weight: $bold;
+    font-size: 3.5rem;
+}
 h2 {
     font-weight: $bold;
     font-size: 3rem;
-    margin: 1rem;
+}
+h3 {
+    font-weight: $bold;
+    font-size: 2.5rem;
+}
+p{
+    font-size: 2rem;
 }
 .contenedor {
-    margin: 2rem 2%;
-    padding: 2rem 2%;
+    margin: 2rem 10%;
+}
+@media (max-width: $telefono) {
+    .contenedor {
+        margin: 2rem 2%;
+    }
+}
+.contenedor-contenido {
+    padding: 2rem;
+    border-radius: 2rem;
+}
+.widthAuto {
+    width: auto;
 }
 .error, .exito {
     font-size: 2rem;
@@ -53,4 +74,31 @@ h2 {
 }
 .exito {
     color: green;
+}
+.grid2 {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: $desktop) {
+    .grid2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: $tablet) {
+    .flex {
+        flex-direction: row;
+    }
+}
+.bg-blanco {
+    background-color: $blanco;
+    color: $negro;
+}
+.bg-gray {
+    background-color: $dark1;
+    color: $blanco;
 }

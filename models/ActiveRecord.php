@@ -63,6 +63,52 @@ class ActiveRecord {
       return $atributos;
   }
 
+  public static function all() {
+    $query = "SELECT * FROM " . static::$tabla;
+
+    $resultado = self::consultarSQL($query);
+
+    return $resultado;
+  }
+
+  public static function find($id) {
+    $query = "SELECT * FROM " . static::$tabla . " WHERE id = ${id}";
+    $resultado = self::consultarSQL($query);
+
+    return array_shift($resultado);
+  }
+
+  public static function consultarSQL($query) {
+    // Consultar la base de datos
+    $resultado =  self::$db->query($query);
+
+    // Iterar los resultados
+    $array = [];
+    while ($registro = $resultado->fetch_assoc()) {
+        $array[] = static::crearObjeto($registro);
+
+        
+    }
+
+    // Liberar la memoria
+    $resultado->free();
+
+    // Retornar los resultados
+    return $array;
+  }
+
+  public function setImagen($imagen) {
+    // Elimina imagen previa
+    if (!is_null($this->id)) {
+        $this->borrarImagen();
+    }
+
+    // Asignar al atributo de imagen el nombre de la imagen
+    if ($imagen) {
+        $this->imagen = $imagen;
+    }
+  }
+
   public static function getErrores() {
     return static::$errores;
   }
@@ -70,6 +116,19 @@ class ActiveRecord {
     static::$errores = [];
     return static::$errores;
   }
+
+  protected static function crearObjeto($registro) {
+    $objeto = new static;
+
+    foreach($registro as $key => $value) {
+        if ( property_exists( $objeto, $key ) ) {
+            $objeto->$key = $value;
+        }
+    } 
+
+    return $objeto;
+  }
+
 
   public function sanitizarAtributos() {
     $atributos = $this->atributos();

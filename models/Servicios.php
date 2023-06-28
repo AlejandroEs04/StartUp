@@ -4,14 +4,13 @@ namespace Model;
 
 class Servicios extends ActiveRecord {
     protected static $tabla = 'servicios';
-    protected static $columnasDB = ['id', 'nombre', 'imagen', 'descripcionResumida', 'descripcionCompleta', 'planId'];
+    protected static $columnasDB = ['id', 'nombre', 'imagen', 'descripcionResumida', 'descripcionCompleta'];
 
     public $id;
     public $nombre;
     public $imagen;
     public $descripcionResumida;
     public $descripcionCompleta;
-    public $planId;
 
     public function __construct($args = []) {
         $this->id = $args['id'] ?? null;
@@ -19,7 +18,6 @@ class Servicios extends ActiveRecord {
         $this->imagen = $args['imagen'] ?? '';
         $this->descripcionResumida = $args['descripcionResumida'] ?? '';
         $this->descripcionCompleta = $args['descripcionCompleta'] ?? '';
-        $this->planId = $args['planId'] ?? '';
     }
     public function validar() {
         if(!$this->nombre) {
@@ -33,9 +31,6 @@ class Servicios extends ActiveRecord {
         }
         if(!$this->descripcionCompleta) {
             self::$errores[] = "La descripcion es obligatoria";
-        }
-        if(!$this->planId) {
-            self::$errores[] = "El plan es obligatorio";
         }
         return self::$errores;
     }

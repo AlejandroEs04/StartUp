@@ -1,12 +1,12 @@
 <div class="contenedor">
     <div class="contenedor-nosotros">
         <div class="nosotros">
-            <h2>Quienes somos?</h2>
+            <h2>Quienes somos</h2>
             <p>Somos una empresa desarrolladora de sitios web y proximamente de aplicaciones para cualquier negocio o empresa, tratamos de dar el mejor servicio a nuestros usuarios. </p>
             <p>Estamos dedicados al desarrollo, y buscamos mejorar cada vez mas para buscar una mejor satisfaccion, y una mejor calidad de servicio y de software.</p>
             <div class="acciones">
                 <div class="boton">
-                    <a href="/contacto">Contactactenos</a>
+                    <a href="#contacto">Contactactenos</a>
                 </div>
             </div>
         </div>
@@ -22,5 +22,9 @@
                 </ul>
             </div>
         </div>
+    </div>
+
+    <div>
+        <?php incluirTemplate('contacto'); ?>
     </div>
 </div>

@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
 }
-@media (min-width: $tablet) {
+@media (min-width: $desktop) {
     .servicios {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -56,7 +56,7 @@
         font-size: 1.7rem;
     }
 }
-@media (min-width:$tablet) {
+@media (min-width:$desktop) {
     .servicio {
         border-bottom: none;
         border-right: 3px solid $color3;
@@ -75,7 +75,7 @@
     margin: 7rem 0 0 0;
     border-bottom: 3px solid $color3;
 }
-@media (min-width:$tablet) {
+@media (min-width:$desktop) {
     .division {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -112,6 +112,16 @@
                 font-size: 1.7rem;
             }
         }
+    }
+}
+.imagenServicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    img {
+        width: 100%;
+        max-width: 45rem;
     }
 }
 

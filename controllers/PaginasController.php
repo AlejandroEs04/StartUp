@@ -4,6 +4,8 @@ namespace Controllers;
 
 use Classes\Send;
 use Model\Email;
+use Model\Planes;
+use Model\Servicios;
 use MVC\Router;
 
 class PaginasController {
@@ -12,6 +14,9 @@ class PaginasController {
         $tipo = "Desarrollo Web";
         $info = "Para hacer conocer tu empresa";
         $other = True;
+
+        $servicios = Servicios::all();
+        $planes = Planes::all();
 
         $email = new Email;
         $errores = Email::getErrores();
@@ -36,6 +41,13 @@ class PaginasController {
                 mail('2004.estrada.lopez@gmail.com', 'Tienes un correo nuevo', $message);
 
                 $resultado = 1;
+                
+                if(empty($_GET)) {
+                    header('Location: ' . $_SERVER['HTTP_REFERER'] ."?resultado=1");
+                } else {
+                    header('Location: ' . $_SERVER['HTTP_REFERER'] ."&resultado=1");
+                }
+                
             }
         }
 
@@ -45,7 +57,9 @@ class PaginasController {
             'info' => $info,
             'other' => $other,
             'errores' => $errores,
-            'resultado' => $resultado
+            'resultado' => $resultado,
+            'servicios' => $servicios,
+            'planes' => $planes
         ]);
     }
     public static function nosotros(Router $router) {
@@ -54,10 +68,13 @@ class PaginasController {
         $info = "¿Quieres saber mas de nosotros?";
         $other = True;
 
+        $servicios = Servicios::all();
+
         $router->render('paginas/nosotros', [
             'tipo' => $tipo,
             'info' => $info,
-            'other' => $other
+            'other' => $other,
+            'servicios' => $servicios
         ]);
     }
     public static function contacto(Router $router) {
@@ -65,6 +82,8 @@ class PaginasController {
         $tipo = "Contactanos";
         $info = "Ponte en contacto con nosotros";
         $other = True;
+
+        $servicios = Servicios::all();
 
         $email = new Email;
         $errores = Email::getErrores();
@@ -99,17 +118,40 @@ class PaginasController {
             'email'=> $email,
             'inicio' => True,
             'errores' => $errores,
-            'resultado' => $resultado
-        ]);
-    }
-    public static function servicios(Router $router) {
-        $router->render('paginas/servicios', [
-
+            'resultado' => $resultado,
+            'servicios' => $servicios
         ]);
     }
     public static function servicio(Router $router) {
-        $router->render('paginas/servicio', [
 
+        $servicios = Servicios::all();
+
+        $servicioId = $_GET['id'];
+        $servicio = Servicios::find($servicioId);
+        $planes = Planes::all();
+
+        $router->render('paginas/servicio', [
+            'other' => True,
+            'servicio' => $servicio,
+            'servicios' => $servicios,
+            'planes' => $planes
+        ]); 
+    }
+
+    public static function plan(Router $router) {
+
+        $planId = $_GET['plan'];
+        $plan = Planes::find($planId);
+
+        $servicios = Servicios::all();
+
+        $planes = Planes::all();
+
+        $router->render('paginas/plan', [
+            'other' => True,
+            'plan' => $plan,
+            'planes' => $planes,
+            'servicios' => $servicios
         ]); 
     }
 }
