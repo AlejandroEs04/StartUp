@@ -789,14 +789,20 @@ template {
     align-items: center;
   }
 }
-@media (min-width: 768px) {
-  .admin-header {
-    height: 9rem;
+.contenedor-admin {
+  margin: 15rem 10% 2rem 10%;
+}
+.contenedor-admin .formulario {
+  margin-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .contenedor-admin {
+    margin-top: 10rem;
   }
 }
 .contenido-admin {
   text-align: center;
-  padding-top: 10rem;
 }
 .contenido-admin h1 {
   font-size: 4rem;
@@ -835,12 +841,11 @@ template {
 .boton:hover {
   border: 1px solid #15A4F1;
   background-color: transparent;
-}
-.boton:hover a {
   color: #15A4F1;
 }
 
 .boton-mediano {
+  margin-top: 3rem;
   width: 15rem;
 }
 
@@ -1398,7 +1403,7 @@ template {
 .contenedor-grid {
   display: grid;
   grid-template-columns: 40% 60%;
-  height: 100%;
+  height: 100vh;
 }
 
 .form-auth {

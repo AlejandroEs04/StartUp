@@ -19,6 +19,8 @@ class AdminController {
 
         $servicio = new Servicios;
 
+        $errores = [];
+
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Crear una nueva instancia 
@@ -33,6 +35,8 @@ class AdminController {
                 $image = Image::make($_FILES['servicios']['tmp_name']['imagen'])->fit(800, 600);
                 $servicio->setImagen($nombreImagen);
             }
+
+            $errores = $servicio->validar();
     
             // Revisar que el arreglo de errores esta vacio
             if (empty($errores)) {
@@ -52,13 +56,16 @@ class AdminController {
 
 
         $router->render('servicios/crear', [
-            'admin' => True
+            'admin' => True,
+            'errores' => $errores
         ]);
     }
 
     public static function plan(Router $router) {
 
         $plan = new Planes;
+
+        $errores = [];
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Crear una nueva instancia
@@ -75,7 +82,8 @@ class AdminController {
         }
 
         $router->render('plan/crear', [
-            'admin' => True
+            'admin' => True,
+            'errores' => $errores
         ]);
     }
 

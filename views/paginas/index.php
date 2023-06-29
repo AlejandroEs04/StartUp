@@ -1,4 +1,13 @@
 <main class="contenedor" id="main">
+    <?php 
+        $resultado = $_GET['resultado'];
+        if($resultado):
+            $mensaje = mostrarNotificacion( intval( $resultado) );
+            if($mensaje): ?>
+                <p class="alerta exito"><?php echo $mensaje; ?></p>
+            <?php endif;
+        endif;
+    ?>
     <div class="informacion">
         <h2>Ofrecemos</h2>
         <div class="servicios ofrecemos">

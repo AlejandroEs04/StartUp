@@ -1,11 +1,18 @@
-@media (min-width: $tablet) {
-    .admin-header {
-        height: 9rem;
+.contenedor-admin {
+    margin: 15rem 10% 2rem 10%;
+
+    .formulario {
+        margin-top: 3rem;
+    }
+}
+@media (min-width: $desktop) {
+    .contenedor-admin {
+        margin-top: 10rem;
     }
 }
 .contenido-admin {
     text-align: center;
-    padding-top: 10rem;
+    
 
     h1 {
         font-size: 4rem;
@@ -45,11 +52,10 @@
     border: 1px solid $color3;
     background-color: transparent;
 
-    a {
-        color: $color3;
-    }
+    color: $color3;
 }
 .boton-mediano {
+    margin-top: 3rem;
     width: 15rem;
 }
 .boton-chico {

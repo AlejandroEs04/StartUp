@@ -1,15 +1,15 @@
-<main class="contenedor seccion">
+<div class="contenedor-admin seccion">
     <h1>Crear Servicio</h1>
 
     <div class="acciones">
-        <div class="boton boton-chico">
-            <a href="/admin">Volver</a>
-        </div>
+        <a href="/admin" class="boton">
+            Volver
+        </a>
     </div>  
 
     <?php foreach($errores as $error): ?>
         <div class="alerta error">
-            <?php debuguear($error); ?>
+            <?php echo $error; ?>
         </div>
     <?php endforeach; ?>
 
@@ -19,4 +19,4 @@
             <input type="submit" value="Crear Servicio" class="boton boton-mediano">
         </form>
     </div>
-</main>
+</div>

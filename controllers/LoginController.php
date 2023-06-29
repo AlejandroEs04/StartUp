@@ -39,8 +39,8 @@ class LoginController {
         $adminsi = true;
 
         $router->render('auth/login', [
-            'admin' => true
-
+            'admin' => true,
+            'errores' => $errores
         ]);
     }
 

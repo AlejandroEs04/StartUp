@@ -6,6 +6,11 @@
         </div>
 
         <div class="form-auth">
+            <?php foreach($errores as $error): ?>
+                <div class="alerta error">
+                    <?php echo $error; ?>
+                </div>
+            <?php endforeach; ?>
             <form class="formulario-admin" method="POST" action="/login">
                     <legend>Ingresa tus datos</legend>
                     <label>Nombre de usuario</label>

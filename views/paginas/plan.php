@@ -1,4 +1,13 @@
 <div class="contenedor">
+    <?php 
+        $resultado = $_GET['resultado'];
+        if($resultado):
+            $mensaje = mostrarNotificacion( intval( $resultado) );
+            if($mensaje): ?>
+                <p class="alerta exito"><?php echo $mensaje; ?></p>
+            <?php endif;
+        endif;
+    ?>
     <h2><?php echo $plan->plan; ?></h2>
     <div class="flex contenedor-plan">
         <div class="bg-blanco contenedor-contenido flex70">

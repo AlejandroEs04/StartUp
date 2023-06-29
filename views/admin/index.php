@@ -1,21 +1,21 @@
-<div class="contenedor contenedor-admin">
+<div class="contenedor-admin">
     <div class="contenido-admin">
         <h1>Desde Admin</h1>
         <p>Administrador de servicios y correos</p>
     </div>
 
     <div class="acciones">
-        <div class="boton">
-            <a href="/crear/servicios">Administrar Servicios</a>
-        </div>
+        <a href="/crear/servicios" class="boton">
+            Administrar Servicios
+        </a>
 
-        <div class="boton">
-            <a href="/crear/plan">Administrar Planes</a>
-        </div>
+        <a href="/crear/plan" class="boton">
+            Administrar Planes
+        </a>
 
-        <div class="boton">
-            <a href="/correos">Administrar Correos</a>
-        </div>
+        <a href="/correos" class="boton">
+            Administrar Correos
+        </a>
     </div>
 
     <div class="informacion" id="servicios">
