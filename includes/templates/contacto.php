@@ -16,8 +16,7 @@
                     <?php endif;
                 endif;
             ?>
-            <form class="formulario-index" method="POST" id="contacto" action="/<?php if(!empty($_GET)){ echo '?info=1'; } ?>">
-                
+            <form class="formulario-index" method="POST" id="contacto" action="/"> 
                 <div class="input-contacto">
                     <label>Nombre</label>
                     <input type="text" name="contacto[name]" placeholder="Nombre">

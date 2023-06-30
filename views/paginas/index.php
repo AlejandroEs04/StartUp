@@ -69,8 +69,14 @@
     </div>
 
    <?php incluirTemplateArray('planes', $planes); ?>
-
-   <?php incluirTemplateArray('contacto', $planes); ?>
+   <?php 
+        $infoExtra = [
+            'servicio' => $servicio = $_GET['id'] ?? null,
+            'plan' => $plan = $_GET['plan'] ?? null
+        ];
+        $_SESSION['infoExtra'] = $infoExtra; 
+    ?>
+   <?php incluirTemplateArray('contacto', $planId); ?>
 
     
 </main>

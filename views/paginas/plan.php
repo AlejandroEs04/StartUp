@@ -56,12 +56,25 @@
                 </tr>
             </table>
         </div>
+
+        <div class="acciones">
+            <a href="#contacto" class="boton">
+                Contactactenos
+            </a>
+        </div>
     </div>
+    
 
     <div>
         <?php incluirTemplateArray('planes', $planes); ?>
     </div>
-
+    <?php 
+        $infoExtra = [
+            'servicio' => $servicio = $_GET['id'] ?? null,
+            'plan' => $plan = $_GET['plan'] ?? null
+        ];
+        $_SESSION['infoExtra'] = $infoExtra; 
+    ?>
     <div>
         <?php incluirTemplate('Contacto') ?>
     </div>

@@ -5,9 +5,9 @@
             <p>Somos una empresa desarrolladora de sitios web y proximamente de aplicaciones para cualquier negocio o empresa, tratamos de dar el mejor servicio a nuestros usuarios. </p>
             <p>Estamos dedicados al desarrollo, y buscamos mejorar cada vez mas para buscar una mejor satisfaccion, y una mejor calidad de servicio y de software.</p>
             <div class="acciones">
-                <div class="boton">
-                    <a href="#contacto">Contactactenos</a>
-                </div>
+                <a href="#contacto" class="boton">
+                    Contactactenos
+                </a>
             </div>
         </div>
         <div class="tarjeta-nosotros">
@@ -16,7 +16,7 @@
                 <ul class="lista">
                     <li type="disc">Desarrollo de sitios web</li>
                     <li type="disc">Desarrollo de tiendas online</li>
-                    <li type="disc">Mantenimiento gratuito el primer ano</li>
+                    <li type="disc">Mantenimiento gratuito el primer año</li>
                     <li type="disc">Dominio gratuito por un ano</li>
                     <li type="disc">Precios justos y transparentes</li>
                 </ul>

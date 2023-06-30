@@ -32,7 +32,7 @@ class AdminController {
 
             if ($_FILES['servicios']['tmp_name']['imagen']) {
                 // Realiza un resize a la imagen con intervetion
-                $image = Image::make($_FILES['servicios']['tmp_name']['imagen'])->fit(800, 600);
+                $image = Image::make($_FILES['servicios']['tmp_name']['imagen'])->fit(800, 800);
                 $servicio->setImagen($nombreImagen);
             }
 

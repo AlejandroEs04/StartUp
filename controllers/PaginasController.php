@@ -23,6 +23,18 @@ class PaginasController {
         $resultado = '';
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            $plan = null;
+            $servicio = null;
+
+            if($_SESSION['infoExtra']['plan']) {
+                $plan = Planes::find($_SESSION['infoExtra']['plan']);
+                $plan = $plan->plan;
+            } 
+            if($_SESSION['infoExtra']['servicio']) {
+                $servicio = Servicios::find($_SESSION['infoExtra']['servicio']);
+                $servicio = $servicio->nombre;
+            }
             // Crear una nueva instancia para correo
             $email =  new Email($_POST['contacto']);
 
@@ -31,16 +43,27 @@ class PaginasController {
             if(empty($errores)) {
                 $message = "Tiene un correo de: " . $email->name . " " . $email->lastName . "\n";
                 $message .= "Correo: " . $email->email . "\n";
-                $message .= "Mensaje: " . $email->message . "\n\n";
+                $message .= "Mensaje: " . $email->message . "\n";
+                if($plan) {
+                    $message .= "Busca Contratar el plan: " . $plan . "\n";
+                }
+                if($servicio) {
+                    $message .= "Con el servicio de: " . $servicio . "\n\n";
+                }
                 $message .= "Enviado el: " . $email->fecha;
 
                 // In case any of our lines are larger than 70 characters, we should use wordwrap()
                 $message = wordwrap($message, 70, "\r\n");
 
+                
+
                 // Send
                 mail('2004.estrada.lopez@gmail.com', 'Tienes un correo nuevo', $message);
 
                 $resultado = 1;
+                $_SESSION['infoExtra'] = null;
+
+                debuguear($message);
                 
                 if(empty($_GET)) {
                     header('Location: ' . $_SERVER['HTTP_REFERER'] ."?resultado=1");
@@ -59,7 +82,8 @@ class PaginasController {
             'errores' => $errores,
             'resultado' => $resultado,
             'servicios' => $servicios,
-            'planes' => $planes
+            'planes' => $planes,
+            'planId' => $planId
         ]);
     }
     public static function nosotros(Router $router) {
@@ -125,8 +149,21 @@ class PaginasController {
     public static function servicio(Router $router) {
 
         $servicios = Servicios::all();
-
         $servicioId = $_GET['id'];
+
+        $info = [
+            'servicio' => $servicioId
+        ];
+        
+        
+        if($_GET['plan']) {
+            $planId = $_GET['plan'];
+
+            $info = [
+              'plan' => $planId,
+              'servicio' => $servicioId  
+            ];
+        }
         $servicio = Servicios::find($servicioId);
         $planes = Planes::all();
 
@@ -134,7 +171,9 @@ class PaginasController {
             'other' => True,
             'servicio' => $servicio,
             'servicios' => $servicios,
-            'planes' => $planes
+            'planes' => $planes,
+            'planId' => $info,
+            'servicioId' => $servicioId
         ]); 
     }
 

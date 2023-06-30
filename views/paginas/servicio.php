@@ -11,16 +11,29 @@
     <h2><?php echo $servicio->nombre; ?></h2>
 
     <div class="grid2">
-        <div class="contenedor">
+        <div class="contenedor textoServicio">
+            <p><?php echo $servicio->descripcionResumida; ?></p>
             <p><?php echo $servicio->descripcionCompleta; ?></p>
         </div>
 
         <div class="imagenServicio">
             <img src="imagenes/<?php echo $servicio->imagen; ?>">
         </div>
+
+        <div class="acciones">
+            <a href="#contacto" class="boton">
+                Contactactenos
+            </a>
+        </div>
     </div>
 
     <?php incluirTemplateArray('planes', $planes); ?>
-
-    <?php incluirTemplate('contacto'); ?>
+    <?php 
+        $infoExtra = [
+            'servicio' => $servicio = $_GET['id'] ?? null,
+            'plan' => $plan = $_GET['plan'] ?? null
+        ];
+        $_SESSION['infoExtra'] = $infoExtra; 
+    ?>
+    <?php incluirTemplateArray('contacto', $planId); ?>
 </div>
